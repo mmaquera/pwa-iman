@@ -1,15 +1,15 @@
-const withCss = require("@zeit/next-css")
-
-module.exports = withCss({
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/,
-      issuer: {
-        test: /\.(js|ts)x?$/,
+module.exports = {
+  webpack: (config, options) => {
+    config.module.rules.push(
+      {
+        test: /\.md$/,
+        use: 'raw-loader',
       },
-      use: ['@svgr/webpack'],
-    });
-
-    return config;
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      }
+    )
+    return config
   },
-})
+}
