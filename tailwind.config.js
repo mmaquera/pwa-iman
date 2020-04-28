@@ -16,6 +16,8 @@ module.exports = {
       black: '#000',
       white: '#fff',
 
+      'gray99': '#FCFCFC',
+
       app:{
         100: "#FAF9F9",
         200: "#FFD6BA",
@@ -154,7 +156,15 @@ module.exports = {
       '48': '12rem',
       '56': '14rem',
       '64': '16rem',
-      'fridge-h': '700px',
+      '4px': '4px',
+      '12px': '12px',
+      '24px': '24px',
+      '32px': '32px',
+      '48px': '48px',
+      '63px': '63px',
+      '65px': '65px',
+      '192px': '192px',
+      '628px': '628px', 
     },
     backgroundColor: theme => theme('colors'),
     backgroundPosition: {
@@ -204,6 +214,8 @@ module.exports = {
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
       outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
       none: 'none',
+      handle: 'inset 0 0px 4px rgba(85, 91, 110, 0.5)',
+      fridge: '0px 4px 20px rgba(0, 0, 0, 0.25)',
     },
     container: {},
     cursor: {

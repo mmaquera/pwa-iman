@@ -4,7 +4,43 @@ import Logo from '../img/cil_fridge.svg'
 
 const Nav = () => {
   return (
-      <nav className="bg-app-300 fixed px-56 py-8 w-full z-10">
+      <nav className="bg-app-300 fixed w-full px-3 py-6 z-10">
+        <div className="max-w-6xl flex items-center mx-auto">
+          <div className="flex-auto flex items-center -mx-3">
+            <a className="inline-flex items-center ml-3 sm:mr-6">
+              <Logo className="text-3xl sm:mr-1" />
+              <h2 className="font-normal not-italic text-app-500 text-lg sm:inline-block my-auto">
+                <label className="align-middle" >Los</label>
+                <label className="font-bold align-middle" >Imanes</label>
+                <label className="align-middle" >DeTu</label>
+                <label className="font-bold align-middle">Refri</label>
+              </h2>
+            </a>
+            <div className="flex flex-col mx-3">
+              <label className="font-normal leading-normal not-italic text-app-500 text-sm" >
+                En Lima
+              </label>
+            </div>
+            <a className="font-medium mx-3 font-normal leading-normal not-italic text-app-500 text-sm" >
+                Sobre Nosotros
+            </a>
+          </div>
+          <div className="-mx-3">
+            <div className="flex flex-col mx-3">
+              <label className="font-normal leading-normal not-italic text-app-500 text-sm">
+                Para restaurantes
+              </label>
+            </div>
+          </div>
+        </div>
+      </nav>
+    )
+}
+
+export default Nav
+
+/*
+<nav className="bg-app-300 fixed px-56 py-8 w-full z-10">
         <div className="container flex flex-wrap items-center mx-auto">
           <div className="flex md:justify-start md:w-1/4 w-full">
             <div className="flex flex-1 justify-center w-full">
@@ -32,7 +68,4 @@ const Nav = () => {
           </div>
         </div>
       </nav>
-    )
-}
-
-export default Nav
+ */

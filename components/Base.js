@@ -2,6 +2,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Nav from '../components/Nav'
+import Footer from '../components/Footer'
 
 const Base = ({children}) => {
   return (
@@ -12,6 +13,7 @@ const Base = ({children}) => {
         </Head>
         <Nav />
         {children}
+        <Footer />
       </div>
     )
 }
