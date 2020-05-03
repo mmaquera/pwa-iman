@@ -24,13 +24,16 @@ const Nav = () => {
             <span className="font-normal leading-normal not-italic text-app-500 text-sm">
               &nbsp;en&nbsp;
             </span>
-            <Dropdown
+            <label className="font-normal leading-normal not-italic text-app-500 text-sm">
+              Lima
+            </label>
+            {/*<Dropdown
               items={[
                 { href: "/", label: "Lima" },
                 { href: "/", label: "Chorrillos" },
               ]}
               label={"Lima"}
-            />
+            />*/}
           </div>
         </div>
         <div className="-mx-3">

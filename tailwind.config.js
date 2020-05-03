@@ -610,6 +610,9 @@ module.exports = {
       "45": "45deg",
       "90": "90deg",
       "180": "180deg",
+      "1": "-1.86deg",
+      "2": "10.08deg",
+      "3": "-3.45deg",
     },
     translate: (theme, { negative }) => ({
       ...theme("spacing"),

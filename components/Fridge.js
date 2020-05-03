@@ -1,6 +1,7 @@
 import React from "react";
 import Handle from "../components/Handle";
 import CardPlace from "../components/CardPlace";
+import CardRegister from "../components/CardRegister";
 
 const Fridge = () => {
   return (
@@ -11,6 +12,7 @@ const Fridge = () => {
         <CardPlace />
         <CardPlace />
         <CardPlace />
+        <CardRegister />
       </div>
     </div>
   );
