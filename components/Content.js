@@ -14,7 +14,7 @@ const Content = ({ restaurants }) => {
             favorito, sin salir de casa
           </label>
         </div>
-        <Fridge />
+        <Fridge restaurants={restaurants} />
       </div>
       <Information restaurants={restaurants} />
     </div>
