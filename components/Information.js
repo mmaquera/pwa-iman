@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CardPlace from "../components/CardPlace";
 import _ from "underscore";
 
-const Information = () => {
+const Information = ({ restaurants }) => {
   const [seeMore, setSeeMore] = useState(false);
   const [districts, setDistrict] = useState([
     { name: "Ancón", select: false },
@@ -64,6 +64,8 @@ const Information = () => {
     { name: "Juguería", select: false },
     { name: "Postres", select: false },
   ]);
+
+  const [places, setPlaces] = useState(restaurants || []);
 
   const districtOnClick = (name, select, index) => {
     let newArray = [...districts];
@@ -186,7 +188,7 @@ const Information = () => {
       restaurants = result;
     }
 
-    console.log(restaurants);
+    setPlaces(restaurants);
   };
 
   return (
@@ -197,9 +199,36 @@ const Information = () => {
             Nuevos imanes para tu refri
           </label>
           <div className="pt-24px">
-            <CardPlace />
-            <CardPlace />
-            <CardPlace />
+            {places.map((place, index) => {
+              const name = place["Nombre del Restaurante"];
+              const logo = place["Foto de Perfil"][0].url;
+              const backgroundImage = (
+                (place["Foto de Portada"] || [])[0] || {}
+              ).url;
+              const description = place["Descripción"];
+              const districts = place["Distritos de cobertura"] || [];
+              const district =
+                districts.length == 0
+                  ? ""
+                  : districts[0] + ` + ${districts.length - 1}`;
+              const phone = place["Atención por teléfono"] || "";
+              const facebook = place["Facebook"] || "";
+              const whatsapp = place["Atención por WhatsApp"] || "";
+
+              return (
+                <CardPlace
+                  key={index}
+                  name={name}
+                  logo={logo}
+                  backgroundImage={backgroundImage}
+                  description={description}
+                  district={district}
+                  phone={phone}
+                  facebook={facebook}
+                  whatsapp={whatsapp}
+                />
+              );
+            })}
           </div>
         </article>
         <article className="block mt-103px">

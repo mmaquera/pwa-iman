@@ -2,7 +2,7 @@ import React from "react";
 import Fridge from "../components/Fridge";
 import Information from "../components/Information";
 
-const Content = () => {
+const Content = ({ restaurants }) => {
   return (
     <div>
       <div className="bg-app-300 pt-32 px-3">
@@ -16,7 +16,7 @@ const Content = () => {
         </div>
         <Fridge />
       </div>
-      <Information />
+      <Information restaurants={restaurants} />
     </div>
   );
 };

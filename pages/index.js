@@ -2,16 +2,15 @@ import React from "react";
 import Base from "../components/Base";
 import Content from "../components/Content";
 
-//const Home = ({ restaurants }) => {
-const Home = () => {
+const Home = ({ restaurants }) => {
   return (
     <Base>
-      <Content />
+      <Content restaurants={restaurants} />
     </Base>
   );
 };
 
-/*export async function getStaticProps() {
+export async function getStaticProps() {
   var Airtable = require("airtable");
   Airtable.configure({
     endpointUrl: "https://api.airtable.com",
@@ -28,6 +27,6 @@ const Home = () => {
 
   const restaurants = await Promise.all(records.map((record) => record.fields));
   return { props: { restaurants } };
-}*/
+}
 
 export default Home;
