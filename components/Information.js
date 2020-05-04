@@ -208,7 +208,7 @@ const Information = ({ restaurants }) => {
           <div className="pt-24px px-16px">
             {places.map((place, index) => {
               const name = place["Nombre del Restaurante"];
-              const logo = place["Foto de Perfil"][0].url;
+              const logo = ((place["Foto de Perfil"] || [])[0] || {}).url;
               const backgroundImage = (
                 (place["Foto de Portada"] || [])[0] || {}
               ).url;

@@ -12,7 +12,7 @@ const Fridge = ({ restaurants }) => {
 
   function parseRestaurant(place) {
     const name = place["Nombre del Restaurante"];
-    const logo = place["Foto de Perfil"][0].url;
+    const logo = ((place["Foto de Perfil"] || [])[0] || {}).url;
     const backgroundImage = ((place["Foto de Portada"] || [])[0] || {}).url;
     const description = place["Descripción"];
     const districts = place["Distritos de cobertura"] || [];

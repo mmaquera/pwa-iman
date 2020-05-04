@@ -10,6 +10,8 @@ const CardPlace = ({
   facebook,
   whatsapp,
 }) => {
+  const backgroundImageNotUndefined = backgroundImage || "";
+
   function getContentDesciption({ name, description }) {
     const text = description || "";
     const contentDescription = `${name} ${text}`;
@@ -25,18 +27,11 @@ const CardPlace = ({
 
   return (
     <div className="w-208px h-160px bg-app-100 rounded-8px shadow-place m-16px inline-block align-top">
-      {/* 
-      style={{
-          backgroundRepeat: "no-repeat",
-          backgroundImage: `url(${backgroundImage || ""})`,
-          backgroundSize: "cover",
-        }}
-      */}
       <div className="w-full h-80px relative rounded-t-8px">
         <img
-          src={backgroundImage || ""}
+          src={backgroundImageNotUndefined}
           className={
-            backgroundImage
+            backgroundImageNotUndefined != ""
               ? "absolute h-full object-cover opacity-50 rounded-t-8px w-full"
               : "hidden"
           }
