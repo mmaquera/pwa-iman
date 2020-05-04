@@ -6,7 +6,7 @@ const Footer = () => {
 
   return (
     <footer className="text-app-100 bg-app-500">
-      <div className=" px-3 mx-auto max-w-6xl">
+      <div className="mx-auto max-w-6xl lg:w-992px">
         <div className="align-top mt-48px inline-block sm:w-2/4">
           <label className="text-xl">Sobre la iniciativa</label>
           <p className="sm:pr-40 mt-4">
@@ -43,8 +43,8 @@ const Footer = () => {
           <label className="block">+ 51 991 665 833</label>
         </div>
       </div>
-      <hr className="bg-white max-w-6xl mt-63px mx-auto px-3" />
-      <div className="max-w-6xl mx-auto pb-48px pt-65px px-3">
+      <hr className="bg-white max-w-6xl mt-63px mx-auto lg:w-992px" />
+      <div className="max-w-6xl mx-auto pb-48px pt-65px lg:w-992px">
         <label className="block text-center text-xl">Muy Pronto</label>
         <div className="block py-48px text-center">
           <div

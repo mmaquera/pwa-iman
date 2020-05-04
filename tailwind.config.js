@@ -165,6 +165,7 @@ module.exports = {
       "24px": "24px",
       "25px": "25px",
       "32px": "32px",
+      "40px": "40px",
       "48px": "48px",
       "63px": "63px",
       "64px": "64px",
@@ -176,6 +177,7 @@ module.exports = {
       "192px": "192px",
       "208px": "208px",
       "628px": "628px",
+      "992px": "992px",
     },
     backgroundColor: (theme) => theme("colors"),
     backgroundPosition: {
@@ -328,6 +330,7 @@ module.exports = {
       "10%": "10%",
       "20%": "20%",
       "30%": "30%",
+      "35%": "35%",
       "40%": "40%",
       "45%": "45%",
       "55%": "55%",
@@ -355,6 +358,7 @@ module.exports = {
       "8": "2rem",
       "9": "2.25rem",
       "10": "2.5rem",
+      "14px": "14px",
     },
     listStyleType: {
       none: "none",

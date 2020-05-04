@@ -10,8 +10,21 @@ const CardPlace = ({
   facebook,
   whatsapp,
 }) => {
+  function getContentDesciption({ name, description }) {
+    const text = description || "";
+    const contentDescription = `${name} ${text}`;
+    let newDesciption = "";
+    if (contentDescription.length >= 76) {
+      newDesciption =
+        text.substring(0, text.length - contentDescription.length) + "...";
+    } else {
+      newDesciption = description;
+    }
+    return <label>{newDesciption}</label>;
+  }
+
   return (
-    <div className="w-208px bg-app-100 rounded-8px shadow-place m-16px inline-block">
+    <div className="w-208px h-160px bg-app-100 rounded-8px shadow-place m-16px inline-block align-top">
       <div
         className="w-full h-80px relative rounded-t-8px"
         style={{
@@ -21,20 +34,20 @@ const CardPlace = ({
         }}
       >
         <img
-          className="h-64px w-64px absolute mb-8px ml-8px bottom-0"
+          className="object-cover rounded-full h-64px w-64px absolute m-8px"
           src={logo}
         />
       </div>
-      <div className="p-8px">
-        <div className="text-12px text-app-500">
+      <div className="p-6px">
+        <div className="h-40px text-12px text-app-500 leading-14px">
           <label className="font-bold">{name} </label>
-          <label>{description}</label>
+          {getContentDesciption({ name, description })}
         </div>
         <div className="flex justify-between items-center">
           <label className="text-12px font-bold flex">{district}</label>
           <div className="flex">
             {phone != "" ? (
-              <div className=" inline-block border border-app-500 rounded-full p-6px">
+              <div className=" inline-block border border-app-500 rounded-full p-6px ml-8px">
                 <img
                   className="h-12px w-12px"
                   src={require("../img/icon-phone-call.svg?url")}
@@ -42,7 +55,7 @@ const CardPlace = ({
               </div>
             ) : null}
             {facebook != "" ? (
-              <div className=" inline-block border border-app-500 rounded-full p-6px">
+              <div className=" inline-block border border-app-500 rounded-full p-6px ml-8px">
                 <img
                   className="h-12px w-12px"
                   src={require("../img/icon_facebook-messenger.svg?url")}
@@ -50,7 +63,7 @@ const CardPlace = ({
               </div>
             ) : null}
             {whatsapp != "" ? (
-              <div className=" inline-block border border-app-500 rounded-full p-6px">
+              <div className=" inline-block border border-app-500 rounded-full p-6px ml-8px">
                 <img
                   className="h-12px w-12px"
                   src={require("../img/icon_whatsapp.svg?url")}

@@ -60,27 +60,29 @@ const Fridge = ({ restaurants }) => {
   };
 
   return (
-    <div className="relative bg-app-100 h-628px mx-auto mt-10 rounded-t-fridge shadow-fridge max-w-6xl">
-      <Handle />
-      <div className="absolute bg-gray99 bottom-0 h-4px mb-4px shadow-handle w-full"></div>
-      <div className="w-full h-full p-48px relative">
-        <div className="absolute left-20% top-5%">
-          {one != null ? <CardPlaceWithInformation place={one} /> : null}
-        </div>
-        <div className="absolute left-45% top-5%">
-          {two != null ? <CardPlaceWithInformation place={two} /> : null}
-        </div>
-        <div className="absolute left-30% top-40% transform rotate-2">
-          {three != null ? <CardPlaceWithInformation place={three} /> : null}
-        </div>
-        <div className="absolute right-10% top-30%">
-          <CardRegister />
-        </div>
-        <div className="absolute left-20% bottom-5% transform rotate-1">
-          {four != null ? <CardPlaceWithInformation place={four} /> : null}
-        </div>
-        <div className="absolute left-55% bottom-5% transform rotate-3">
-          {five != null ? <CardPlaceWithInformation place={five} /> : null}
+    <div className="overflow-y-hidden">
+      <div className="relative bg-app-100 h-628px mx-auto mt-10 rounded-t-fridge shadow-fridge max-w-6xl lg:w-992px">
+        <Handle />
+        <div className="absolute bg-gray99 bottom-0 h-4px mb-4px shadow-handle w-full"></div>
+        <div className="w-full h-full p-48px relative">
+          <div className="lg:absolute lg:left-10% lg:top-5%">
+            {one != null ? <CardPlaceWithInformation place={one} /> : null}
+          </div>
+          <div className="lg:absolute lg:left-45% lg:top-5%">
+            {two != null ? <CardPlaceWithInformation place={two} /> : null}
+          </div>
+          <div className="lg:absolute lg:left-30% lg:top-35% transform rotate-2">
+            {three != null ? <CardPlaceWithInformation place={three} /> : null}
+          </div>
+          <div className="lg:absolute lg:right-5% lg:top-30%">
+            <CardRegister />
+          </div>
+          <div className="lg:absolute lg:left-20% lg:bottom-5% lg:transform lg:rotate-1">
+            {four != null ? <CardPlaceWithInformation place={four} /> : null}
+          </div>
+          <div className="lg:absolute lg:left-55% lg:bottom-5% lg:transform lg:rotate-3">
+            {five != null ? <CardPlaceWithInformation place={five} /> : null}
+          </div>
         </div>
       </div>
     </div>

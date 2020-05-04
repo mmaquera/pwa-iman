@@ -69,6 +69,10 @@ const Information = ({ restaurants }) => {
 
   const districtOnClick = (name, select, index) => {
     let newArray = [...districts];
+    newArray = _.map(newArray, function (item) {
+      return { name: item.name, select: false };
+    });
+
     newArray[index] = {
       name,
       select: select ? false : true,
@@ -110,6 +114,9 @@ const Information = ({ restaurants }) => {
 
   const categoryOnClick = (name, select, index) => {
     let newArray = [...categories];
+    newArray = _.map(newArray, function (item) {
+      return { name: item.name, select: false };
+    });
     newArray[index] = {
       name,
       select: select ? false : true,
@@ -192,13 +199,13 @@ const Information = ({ restaurants }) => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto pt-48px px-3 pb-95px">
+    <div className="max-w-6xl mx-auto pt-48px pb-95px lg:w-992px">
       <section>
         <article>
-          <label className="font-bold text-2xl text-app-500">
+          <label className="font-bold text-2xl text-app-500 pl-32px">
             Nuevos imanes para tu refri
           </label>
-          <div className="pt-24px">
+          <div className="pt-24px px-16px">
             {places.map((place, index) => {
               const name = place["Nombre del Restaurante"];
               const logo = place["Foto de Perfil"][0].url;
@@ -231,7 +238,7 @@ const Information = ({ restaurants }) => {
             })}
           </div>
         </article>
-        <article className="block mt-103px">
+        <article className="block mt-103px px-32px">
           <label className="font-bold text-2xl text-app-500">
             Busca delivery en lima
           </label>

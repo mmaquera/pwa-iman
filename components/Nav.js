@@ -6,35 +6,38 @@ import { ChevronDown, ChevronUp } from "react-feather";
 const Nav = () => {
   return (
     <nav className="bg-app-300 fixed w-full px-3 py-6 z-10">
-      <div className="max-w-6xl flex items-center mx-auto">
-        <div className="flex-auto flex items-center -mx-3">
-          <div className="inline-flex items-center ml-3 sm:mr-6">
-            <div
-              className="text-3xl sm:mr-1"
-              dangerouslySetInnerHTML={{
-                __html: require("../img/cil_fridge.svg?include"),
-              }}
-            />
-            <h2 className="font-normal not-italic text-app-500 text-lg sm:inline-block my-auto">
-              <label className="align-middle">Los</label>
-              <label className="font-bold align-middle">Imanes</label>
-              <label className="align-middle">DeTu</label>
-              <label className="font-bold align-middle">Refri</label>
-            </h2>
-            <span className="font-normal leading-normal not-italic text-app-500 text-sm">
-              &nbsp;en&nbsp;
-            </span>
-            <label className="font-normal leading-normal not-italic text-app-500 text-sm">
-              Lima
-            </label>
-            {/*<Dropdown
+      <div className="max-w-6xl flex mx-auto">
+        <div className="flex-auto flex -mx-3">
+          <Link href="/">
+            <a className="inline-flex ml-3 sm:mr-6">
+              <div
+                className="sm:mr-1"
+                dangerouslySetInnerHTML={{
+                  __html: require("../img/cil_fridge.svg?include"),
+                }}
+              />
+              <h2 className="font-normal not-italic text-app-500 text-lg sm:inline-block my-auto">
+                <span className="">Los</span>
+                <span className="font-bold">Imanes</span>
+                <span className="">DeTu</span>
+                <span className="font-bold ">Refri</span>
+                <span className="font-normal leading-normal not-italic text-app-500 text-sm">
+                  &nbsp;en&nbsp;
+                </span>
+                <span className="font-normal leading-normal not-italic text-app-500 text-sm">
+                  Lima
+                </span>
+              </h2>
+            </a>
+          </Link>
+
+          {/*<Dropdown
               items={[
                 { href: "/", label: "Lima" },
                 { href: "/", label: "Chorrillos" },
               ]}
               label={"Lima"}
             />*/}
-          </div>
         </div>
         <div className="-mx-3">
           <div className="flex flex-col mx-3">
